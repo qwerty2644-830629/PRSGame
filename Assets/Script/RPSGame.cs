@@ -20,24 +20,24 @@ public class RPSGame : MonoBehaviour
         {
             NPCPick.text = "石頭";
         }
-        else if (NPCIndex == 2)
+        else
         {
             NPCPick.text = "布";
         }
 
-        if (iIndex == 0)
+        switch(iIndex)
         {
-            playerPick.text = "剪刀";
+            case 0:
+                playerPick.text = "剪刀";
+                break;
+            case 1:
+                playerPick.text = "石頭";
+                break;
+            case 2:
+                playerPick.text = "布";                
+                break;
         }
-        else if (iIndex == 1)
-        {
-            playerPick.text = "石頭";
-        }
-        else if (iIndex == 2)
-        {
-            playerPick.text = "布";
-        }
-
+           
         if (iIndex == NPCIndex)
         {
             Result.text = "平手";
